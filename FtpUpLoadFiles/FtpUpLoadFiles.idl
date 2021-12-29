@@ -1,0 +1,51 @@
+// FtpUpLoadFiles.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(FtpUpLoadFiles.tlb)，该类型库将成为
+// FtpUpLoadFiles.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(DEDDF17A-385B-495F-885D-03D714B76656), version(1.0),
+  control ]
+library FtpUpLoadFilesLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CFtpUpLoadFilesCtrl 的主调度接口
+	[ 
+		uuid(5C3172B8-CE50-4DCB-B768-60506BBCB4B6)	
+	]
+	dispinterface _DFtpUpLoadFiles
+	{
+		properties:
+		methods:
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  CFtpUpLoadFilesCtrl 的事件调度接口
+
+	[ 
+		uuid(1F0FBEBE-7F6F-4339-8033-B2641403CD5A)	
+	]
+	dispinterface _DFtpUpLoadFilesEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CFtpUpLoadFilesCtrl 的类信息
+	[
+		uuid(58CAA706-0580-4888-BB5B-447A34C1984F)
+	]
+	coclass FtpUpLoadFiles
+	{
+		[default] dispinterface _DFtpUpLoadFiles;
+		[default, source] dispinterface _DFtpUpLoadFilesEvents;
+	};
+
+};
