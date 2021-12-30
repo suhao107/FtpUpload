@@ -22,6 +22,10 @@
 #include <afxcmn.h>                     // MFC 对 Windows 公共控件的支持
 #endif // _AFX_NO_AFXCMN_SUPPORT
 
+
+//#define _CONVERSION_DONT_USE_THREAD_LOCALE
+
+
 // 如果不希望使用 MFC 数据库类，
 //  请删除下面的两个包含文件
 #ifndef _WIN64

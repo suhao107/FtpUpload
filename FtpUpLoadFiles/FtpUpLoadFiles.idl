@@ -23,6 +23,11 @@ library FtpUpLoadFilesLib
 		methods:
 
 			[id(DISPID_ABOUTBOX)] void AboutBox();
+			[id(1)] LONG UpLoadFiles(BSTR* PathFile, BSTR* FtpData);
+			[id(2)] BSTR getUploadProgress();
+			[id(3)] BSTR getCurrCompleteFiles();
+			[id(4)] LONG setThreadStop();
+			[id(5)] LONG getTaskComlete();
 	};
 
 	//  CFtpUpLoadFilesCtrl 的事件调度接口
